@@ -14,7 +14,6 @@ class Product < ActiveRecord::Base
 	end
 end
 
-
 	def self.latest
 		Product.order('update_at').latest
 	end

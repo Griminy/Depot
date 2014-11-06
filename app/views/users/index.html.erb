@@ -1,10 +1,9 @@
 <h1>Listing users</h1>
 <% if notice %>
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 <% end %>
 
 <table>
-  
   <thead>
       <th>Name</th>
   </thead>
@@ -22,6 +21,6 @@
   </tbody>
 </table>
 
-<br>
+<br/>
 
 <%= link_to 'New User', new_user_path %>

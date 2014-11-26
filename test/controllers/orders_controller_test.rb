@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class OrdersControllerTest < ActionController::TestCase
+  
   setup do
     @order = orders(:one)
   end
@@ -20,7 +21,7 @@ class OrdersControllerTest < ActionController::TestCase
   test "should get new" do
     item = LineItem.new 
     item.build_cart
-    item.product = product(:ruby)
+    item.product = products(:ruby)
     item.save!
     session[:cart_id] = item.cart.id
     get :new

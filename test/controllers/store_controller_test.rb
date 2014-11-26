@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class StoreControllerTest < ActionController::TestCase
+  
   test "markup needed for store.js.coffee is in place" do
   	get :index
   	assert_select '.store .entry > img', 3

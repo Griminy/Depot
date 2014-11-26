@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionController::TestCase
+  
   setup do
     @user = users(:one)
   end
@@ -23,7 +24,7 @@ class UsersControllerTest < ActionController::TestCase
                             password_confirmation: 'secret' }
     end
 
-    assert_redirected_to user_path
+    assert_redirected_to users_path
   end
 
   test "should show user" do

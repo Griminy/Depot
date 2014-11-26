@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class SessionsControllerTest < ActionController::TestCase
+ 
   test "shold login" do
     dave = users(:one)
     post :create , name: dave.name, password: "secret"
@@ -9,9 +10,9 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "should fail login" do
-    dave = user(:one)
+    dave = users(:one)
     post :create, name: dave.name, password: "wrong"
-    assert_redirected_to lo_url
+    assert_redirected_to login_url
     end
 
   test "should logout" do
